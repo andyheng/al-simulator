@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AL Construction Simulator</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header_title">AL Construction Simulator</h1>
+    </header>
+
+    <div class="container">
+        <div class="banner">
+            <select class="banner_dropdown" autocomplete="off">
+                <option value="Heavy">Heavy Construction</option>
+                <option value="CrimsonEchoes">Crimson Echoes</option>
+                <option value="LunarNewYear2019">Lunar New Year's 2019</option>
+                <option value="EssexAirRaid">Air Raid Drills with Essex</option>
+                <option value="StarrySkyArcticFjord">Starry Sky Over the Arctic Fjord</option>
+            </select>
+            <img class="banner_img" />
+            <!-- <ul class="banner_rates">
+            </ul> -->
+            <div class="banner_showcase banner_showcase-hidden">
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn btn_construct btn_construct-1">Construct 1</button>
+            <button class="btn btn_construct btn_construct-10">Construct 10</button>
+        </div>
+
+        <div class="stats">
+            <p>Total rolls: <span class="stats_total"></span></p>
+            <p><img src="./src/img/ui/cube.png" title="Cube" alt="Cubes" /> <span class="stats_cubes"></span></p>
+            <p><img src="./src/img/ui/gold.png" title="Gold" alt="Gold" /> <span class="stats_gold"></span></p>
+        </div>
+
+        <div class="constructions">
+            <figure class="constructions_ship constructions_1 constructions-hidden">
+                <img src="" alt="" title="" />
+                <figcaption></figcaption>
+            </figure>
+
+            <figure class="constructions_ship constructions_10 constructions-hidden">
+                <img src="" alt="" title="" />
+                <figcaption></figcaption>
+            </figure>
+            <figure class="constructions_ship constructions_10 constructions-hidden">
+                <img src="" alt="" title="" />
+                <figcaption></figcaption>
+            </figure>
+            <figure class="constructions_ship constructions_10 constructions-hidden">
+                <img src="" alt="" title="" />
+                <figcaption></figcaption>
+            </figure>
+            <figure class="constructions_ship constructions_10 constructions-hidden">
+                <img src="" alt="" title="" />
+                <figcaption></figcaption>
+            </figure>
+            <figure class="constructions_ship constructions_10 constructions-hidden">
+                <img src="" alt="" title="" />
+                <figcaption></figcaption>
+            </figure>
+            <figure class="constructions_ship constructions_10 constructions-hidden">
+                <img src="" alt="" title="" />
+                <figcaption></figcaption>
+            </figure>
+            <figure class="constructions_ship constructions_10 constructions-hidden">
+                <img src="" alt="" title="" />
+                <figcaption></figcaption>
+            </figure>
+            <figure class="constructions_ship constructions_10 constructions-hidden">
+                <img src="" alt="" title="" />
+                <figcaption></figcaption>
+            </figure>
+            <figure class="constructions_ship constructions_10 constructions-hidden">
+                <img src="" alt="" title="" />
+                <figcaption></figcaption>
+            </figure>
+            <figure class="constructions_ship constructions_10 constructions-hidden">
+                <img src="" alt="" title="" />
+                <figcaption></figcaption>
+            </figure>
+        </div>
+
+        <div class="counters">
+            <div class="counter-n">
+                <h3>Normal (N):
+                    <span class="counter_value counter_value-n"></span>
+                    <span class="counter_rate counter_rate-n"></span>
+                </h3>
+                <ul class="counter_ships-n"></ul>
+            </div>
+
+            <div class="counter-r">
+                <h3>Rare (R):
+                    <span class="counter_value counter_value-r"></span>
+                    <span class="counter_rate counter_rate-r"></span>
+                </h3>
+                <ul class="counter_ships-r"></ul>
+            </div>
+
+            <div class="counter-sr">
+                <h3>Elite (SR):
+                    <span class="counter_value counter_value-sr"></span>
+                    <span class="counter_rate counter_rate-sr"></span>
+                </h3>
+                <ul class="counter_ships-sr"></ul>
+            </div>
+
+            <div class="counter-ssr">
+                <h3>Champion (SSR):
+                    <span class="counter_value counter_value-ssr"></span>
+                    <span class="counter_rate counter_rate-ssr"></span>
+                </h3>
+                <ul class="counter_ships-ssr"></ul>
+            </div>
+        </div>
+
+        <div class="about">
+            <p>This simulator makes certain assumptions about how the game works:</p>
+            <ul>
+                <li>While the contents of the permanent pools (Light Construction, Heavy Construction, Special
+                    Construction) are known, no exact data is provided or known about the rates of each inidividual
+                    ship. Therefore, ships with no given rate (ie. not on rate-up) are randomly chosen.</li>
+                <li>While it is known that each limited pool uses ships from a certain permanent pool (usually heavy or
+                    special), it is not known exactly which ships are used. Generally, from user experience, it has
+                    been observed that not all ships in permanent pools are included in limited pools (ie. a limited
+                    pool that pulls from the special pool may exclude certain permanent SSR ships that have been added
+                    recently). Therefore, this simulator uses slightly different datasets when constructing from
+                    permanent pools and from limited pools.</li>
+            </ul>
+            <p>These assumptions may make this simulator not completely accurate to the game, but they act as a bandaid
+                without total information of the rates and content.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            Made by nk
+        </div>
+    </footer>
+    <div id="hidden"></div>
+
+</body>
+<script src="./build/app.js"></script>
+</html>
